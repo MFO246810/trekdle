@@ -13,14 +13,14 @@ jobs:
         - name: Build Image (Runs tests automatically)
           run: | 
             whoami
-            if [ "$(sudo docker ps -aq -f name=trekdle)" ]; then
+            if [ "$(docker ps -aq -f name=trekdle)" ]; then
                 echo "Container exists → stopping and removing..."
-                sudo docker stop trekdle || true
-                sudo docker rm -f trekdle || true
+                docker stop trekdle || true
+                docker rm -f trekdle || true
             else
                 echo "Container does NOT exist → continuing..."
             fi
-            sudo docker builder prune -a
-            sudo docker build -t trekdle .
-            sudo docker run -p 8000:8000 -d --name trekdle trekdle
+            docker builder prune -a
+            docker build -t trekdle .
+            docker run -p 8000:8000 -d --name trekdle trekdle
 
