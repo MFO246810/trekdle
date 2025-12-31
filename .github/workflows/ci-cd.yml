@@ -1,0 +1,28 @@
+name: trekdle_wordle
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+    build-container:
+        runs-on: self-hosted
+        steps:
+        - uses: actions/checkout@v4
+        - name: Build Image (Runs tests automatically)
+          run: | 
+            if [ "$(sudo docker ps -aq -f name=trekdle)" ]; then
+                echo "Container exists → stopping and removing..."
+                sudo docker stop trekdle || true
+                sudo docker rm -f trekdle || true
+            else
+                echo "Container does NOT exist → continuing..."
+            fi
+            sudo docker builder prune -a
+            sudo docker build -t trekdle .
+            sudo docker run -p 8000:8000 --name trekdle trekdle
+
