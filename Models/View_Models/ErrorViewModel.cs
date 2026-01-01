@@ -1,4 +1,4 @@
-namespace trekdle.Models;
+namespace trekdle.Models.View_Models;
 
 public class ErrorViewModel
 {

@@ -12,7 +12,6 @@ jobs:
         - uses: actions/checkout@v4
         - name: Build Image (Runs tests automatically)
           run: | 
-            whoami
             if [ "$(docker ps -aq -f name=trekdle)" ]; then
                 echo "Container exists → stopping and removing..."
                 docker stop trekdle || true

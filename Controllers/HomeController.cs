@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using trekdle.Models;
+using trekdle.Models.View_Models;
 
 namespace trekdle.Controllers;
 
