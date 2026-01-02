@@ -35,4 +35,5 @@ public class Wordle_Question
     public virtual Admin AddedBy { get; set; }
 
     public virtual ICollection<Image> Images { get; set; } = new List<Image>();
+    public virtual ICollection<Daily_Questions> DailyQuestions { get; set; } = new List<Daily_Questions>();
 }
