@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace trekdle.Models.DB_Models; 
 
 [Table("Images")]
-public class Image
+public class Image: IEntity
 {
     [Key]
     [Column("ID")]

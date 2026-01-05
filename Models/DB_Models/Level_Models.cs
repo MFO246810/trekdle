@@ -1,5 +1,5 @@
 namespace trekdle.Models.DB_Models; 
-public enum Level
+public enum Level 
 {
     Level_1 = 1,
     Level_2 = 2,

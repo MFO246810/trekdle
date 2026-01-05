@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace trekdle.Models.DB_Models; 
 
 [Table("Wordle_Question")]
-public class Wordle_Question
+public class Wordle_Question: IEntity
 {
     [Key]
     [Column("ID")]

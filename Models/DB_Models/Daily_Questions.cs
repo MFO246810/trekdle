@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace trekdle.Models.DB_Models;
 
 [Table("Daily_Questions")]
-public class Daily_Questions
+public class Daily_Questions: IEntity
 {
     [Key]
     public long Id { get; set;}
