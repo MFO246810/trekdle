@@ -1,0 +1,52 @@
+/* 1. The Full Page Background */
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+    color: #e2e8f0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    overflow: hidden; 
+    margin: 0; /* Important reset */
+}
+
+/* 2. The Animated Stars Background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    animation: stars 60s linear infinite;
+    z-index: -1; 
+}
+
+@keyframes stars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-550px); }
+}
+
+/* 3. The Glass Card Container */
+.space-card {
+    background-color: rgba(30, 41, 59, 0.7); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+    color: white;
+}
+
+/* 4. Form Inputs */
+.form-control {
+    background-color: rgba(15, 23, 42, 0.8);
+    border: 1px solid #475569;
+    color: white;
+}
+
+.form-control:focus {
+    background-color: rgba(15, 23, 42, 1);
+    color: white;
+    border-color: #38bdf8;
+    box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+}

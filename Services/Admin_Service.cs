@@ -9,7 +9,7 @@ public class Admin_Service: Base_Service<Admin>
 
     public override async Task CreateItemAsync(Admin admin)
     {
-        admin.Password = BCrypt.HashPassword(admin.Password);
+        admin.Password =  BCrypt.Net.BCrypt.HashPassword(admin.Password);
 
         await base.CreateItemAsync(admin);
     }

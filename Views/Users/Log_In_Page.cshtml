@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Log In";
+    Layout = null;
+}
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trekdle Admin</title>
+    
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/Log_In_Page.css" asp-append-version="true"/>
+
+    </head>
+    <body>
+        <div class="d-flex justify-content-center align-items-center vh-100">
+            <div class="border p-4 rounded shadow space-card" style="max-width: 600px; width: 100%;">
+                <h1 class="text-center">Trekdle Admin Log In</h1>
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="Username" class="form-label"> Username: </label>
+                        <input type="text" class="form-control" name=Username value=""/> 
+                    </div>
+                    <div class="mb-3">
+                        <label for="Password" class="form-label"> Password: </label>
+                        <input type="password" class="form-control" name=Password value=""/> 
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    </html>

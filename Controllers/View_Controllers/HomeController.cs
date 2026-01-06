@@ -2,7 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using trekdle.Models.View_Models;
 
-namespace trekdle.Controllers;
+namespace trekdle.Controllers.View_Controllers;
 
 public class HomeController : Controller
 {
