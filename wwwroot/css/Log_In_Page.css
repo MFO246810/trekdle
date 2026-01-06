@@ -1,6 +1,6 @@
 /* 1. The Full Page Background */
 body {
-    background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+    background: linear-gradient(135deg, #dac50b 0%, #020617 100%);
     color: #e2e8f0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
@@ -30,7 +30,7 @@ body::before {
 
 /* 3. The Glass Card Container */
 .space-card {
-    background-color: rgba(30, 41, 59, 0.7); 
+    background-color: rgba(59, 56, 30, 0.7); 
     backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
