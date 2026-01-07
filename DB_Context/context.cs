@@ -15,7 +15,9 @@ public class DBContext : DbContext
     public DbSet<Daily_Questions> Daily_Questions{get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder){
-        modelBuilder.Entity<Admin>().ToTable("Admin");
+        modelBuilder.Entity<Admin>().ToTable("Admin")
+        .HasIndex(a => a.Username) 
+        .IsUnique();
         modelBuilder.Entity<Wordle_Question>().ToTable("Wordle_Question");
         modelBuilder.Entity<Image>().ToTable("Images");
         modelBuilder.Entity<Daily_Questions>().ToTable("Daily_Questions");

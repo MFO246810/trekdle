@@ -12,6 +12,16 @@ public class Admin : IEntity
 
     [Required]
     [MaxLength(255)]
+    [Column("firstname")]
+    public string Firstname { get; set; }
+
+    [Required]
+    [MaxLength(255)]
+    [Column("lastname")]
+    public string Lastname { get; set; }
+
+    [Required]
+    [MaxLength(255)]
     [Column("username")]
     public string Username { get; set; }
 
@@ -19,11 +29,6 @@ public class Admin : IEntity
     [MaxLength(255)]
     [Column("password")]
     public string Password { get; set; }
-
-    [Required]
-    [MaxLength(255)]
-    [Column("email")]
-    public string Email { get; set; }
 
     // Navigation Properties
     public virtual ICollection<Wordle_Question> WordleQuestions { get; set; } = new List<Wordle_Question>();
