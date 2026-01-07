@@ -2,10 +2,15 @@
 /* 1. Import the font from Google */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+@font-face {
+    font-family: 'TNG_Title';
+    src: url('../fonts/TNG_Title.ttf') format('truetype');
+}
+
 /* 2. Apply it to the entire application */
 html, body {
     /* 'Orbitron' is the priority, 'sans-serif' is the backup */
-    font-family: 'Orbitron', sans-serif !important; 
+    font-family: 'TNG_Title', 'Orbitron', sans-serif !important; 
 }
 
 body {

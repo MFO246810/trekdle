@@ -14,4 +14,9 @@ public class UsersController : Controller
     {
         return View();
     }
+
+    public IActionResult Home()
+    {
+        return View();
+    }
 }
