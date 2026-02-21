@@ -15,8 +15,9 @@ public class UsersController : Controller
         return View();
     }
 
-    public IActionResult Home()
+    public IActionResult Index()
     {
         return View();
     }
+    
 }

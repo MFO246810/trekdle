@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'TNG_Title';
+  src: url('../fonts/TNG_Title.ttf') format('truetype');
+}
+
+html, body {
+  font-family: 'TNG_Title', 'Orbitron', sans-serif !important; 
+}
+
 html {
   font-size: 14px;
 }

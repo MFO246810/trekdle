@@ -7,6 +7,7 @@
 	<meta name="format-detection" content="date=no">
 	<link rel="stylesheet" type="text/css" href="~/assets/classic.css">
     
+    
 </head>
 <body>
 	<audio id="audio1" src="~/assets/beep1.mp3" preload="auto"></audio>
@@ -307,10 +308,13 @@
 						<a href="#">03</a>
 						<a href="#">04</a>
 						-->
-						<button onclick="playSoundAndRedirect('audio2', '#')">01</button>
-						<button onclick="playSoundAndRedirect('audio2', '#')">02</button>
-						<button onclick="playSoundAndRedirect('audio2', '#')">03</button>
-						<button onclick="playSoundAndRedirect('audio2', '#')">04</button>
+						
+                        <a asp-controller="Users" asp-action="Index" class="btn btn-warp" onclick="playSoundAndRedirect('audio2', '#')">
+                            Users
+                        </a>
+						<button onclick="playSoundAndRedirect('audio2', '#')">Question</button>
+						<button onclick="playSoundAndRedirect('audio2', '#')">Bug Report</button>
+						<button onclick="playSoundAndRedirect('audio2', '#')">Extra Button</button>
 					</nav>
 				</div>
 				<div class="bar-panel first-bar-panel">
