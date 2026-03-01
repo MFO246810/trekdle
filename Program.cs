@@ -1,9 +1,11 @@
 using DotNetEnv;
 using trekdle.DB_Context;
+using trekdle.Models.DB_Models;
+using trekdle.Services;
 using Microsoft.EntityFrameworkCore;
 
 Env.Load();
-
+ 
 var builder = WebApplication.CreateBuilder(args);
 
 var Connection_String = $"server={Environment.GetEnvironmentVariable("DB_SERVER")};" +
@@ -16,6 +18,10 @@ var Connection_String = $"server={Environment.GetEnvironmentVariable("DB_SERVER"
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DBContext>(options =>
   options.UseMySql(Connection_String, ServerVersion.AutoDetect(Connection_String)));
+
+builder.Services.AddScoped<Admin_Service>();
+builder.Services.AddScoped<Base_Service<Admin>>();
+builder.Services.AddServerSideBlazor();
 
 var app = builder.Build();
 
@@ -48,6 +54,8 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
+
+app.MapBlazorHub();
 
 
 app.Run();

@@ -22,8 +22,21 @@ public class Base_Service<T>: IBaseService<T> where T : class, IEntity
     }
     public async virtual Task CreateItemAsync(T item)
     {
-        await _dbSet.AddAsync(item);
-        await _context.SaveChangesAsync();
+        try
+        {
+            if (item == null){
+                throw new ArgumentNullException(nameof(item), "Item cannot be null");
+            }
+
+            await _dbSet.AddAsync(item);
+            await _context.SaveChangesAsync();
+
+        }
+        catch (Exception ex)
+        {
+            System.Console.WriteLine($"Error creating item: {ex.Message}");
+            throw; // Re-throw the exception after logging
+        }
     }
     public async Task UpdateItemAsync(T item)
     {

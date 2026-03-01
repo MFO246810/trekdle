@@ -10,22 +10,12 @@ public class Admin : IEntity
     [Key]
     public long Id { get; set; }
 
-    [Required]
-    [MaxLength(255)]
-    [Column("firstname")]
-    public string Firstname { get; set; }
-
-    [Required]
-    [MaxLength(255)]
-    [Column("lastname")]
-    public string Lastname { get; set; }
-
-    [Required]
+    [Required(ErrorMessage = "Captain, you must provide a username.")]
     [MaxLength(255)]
     [Column("username")]
     public string Username { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "Captain, you must provide a password.")]
     [MaxLength(255)]
     [Column("password")]
     public string Password { get; set; }

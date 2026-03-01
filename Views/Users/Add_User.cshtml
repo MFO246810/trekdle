@@ -1,0 +1,33 @@
+@using trekdle.Views.Shared
+@using trekdle.Models.View_Models 
+@{
+    ViewData["Title"] = "New Cadet Creation";
+}
+    <div class="container-fluid ">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="p-4 rounded shadow space-card">
+                <h1 class="go-center font-gold">Create New Cadet Account</h1>
+                    <component type="typeof(Info_Modal_Card)" render-mode="ServerPrerendered" param-render=false param-message='"Welcome to the Cadet Creation Portal! Please ensure all information is accurate."' />
+                    <form id="Create_User_Form" onsubmit="submitformdata(event)" style="display: flex; justify-content: center">
+                        <div style="width: 800px; display: flex; flex-direction: column; gap: 1rem;">
+                            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                <label for="Username" class="go-left"> Cadet's Name: </label>
+                                <input type="text" name="Username" class="lcars-custom-input" placeholder="Enter Username" />
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                                <label for="Password" class="go-left"> Cadet's Password: </label>
+                                <input type="password" class="lcars-custom-input" name="Password" value="" placeholder="Enter Password"/> 
+                            </div>
+                            <div style="display: flex; justify-content: center">
+                                <div class="buttons">
+                                   <button onclick="playSoundAndRedirect('audio2', '#')" class="button-green" style="display: flex; justify-content: center; align-items: center; padding-bottom: 0rem; padding-inline: 0rem" type="submit">
+                                        Hop onboard!
+                                   </button>    
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+

@@ -3,6 +3,8 @@ using trekdle.Models.DB_Models;
 using trekdle.Services;
 using BCrypt.Net;
 
+namespace trekdle.Services;
+
 public class Admin_Service: Base_Service<Admin>
 {
     public Admin_Service(DBContext context): base(context) {}

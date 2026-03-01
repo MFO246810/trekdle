@@ -1,0 +1,17 @@
+@namespace trekdle.Views.Shared
+
+@if (render)
+{
+    <div class="lcars-info-card-container ">
+        <div class="lcars-info-card">
+            <h2 class="go-center font-gray" style="margin-bottom: 0rem;">Important Information</h2>
+            <p class="go-center font-white"> @message </p>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public string message { get; set; } = "This is an important message for the user. Please read it carefully.";
+    [Parameter] public bool render { get; set; } = false;
+
+}
